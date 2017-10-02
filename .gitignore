@@ -99,12 +99,8 @@ ENV/
 
 # mypy
 .mypy_cache/
-.idea/vcs.xml
-.idea/inspectionProfiles/
-.idea/misc.xml
-.idea/modules.xml
-.idea/some-stuff.iml
-.idea/workspace.xml
+
+.idea/
 .~lock.Train.csv#
 Sample submission.csv
 Train.csv
