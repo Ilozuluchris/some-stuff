@@ -4,11 +4,10 @@ from sklearn.linear_model import ElasticNet
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import GridSearchCV
 from first import X,y,X_train,X_test,y_train,y_test
-from first import scoring_SN,X_scoring
+from first import scoring_SN,X_scoring,write_to_csv
 
 #print scoring_SN.head()
 #print X_scoring.head()
-
 l1_space = np.linspace(0,1,100)
 
 param_grid = {'l1_ratio':l1_space}

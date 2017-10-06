@@ -102,6 +102,4 @@ ENV/
 
 .idea/
 .~lock.Train.csv#
-Sample submission.csv
-Train.csv
-scoring.csv
+*.csv

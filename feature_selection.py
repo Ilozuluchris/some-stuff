@@ -2,7 +2,7 @@ from sklearn.feature_selection import RFE
 from first import X,y,X_train,X_test,y_train,y_test
 from first import scoring_SN,X_scoring
 from sklearn.linear_model import BayesianRidge,RidgeCV,SGDRegressor,ElasticNetCV
-from sklearn.model_selection import cross_validate,GridSearchCV
+from first import write_to_csv
 
 import numpy as np
 import pandas as pd
@@ -34,14 +34,5 @@ y_scoring = selector.predict(X_scoring)
 #print("Tuned ElasticNet R squared: {}".format(r2))
 #print("Tuned ElasticNet RMSE: {}".format(np.sqrt(mse)))
 #print ("Best Score is : {}".format(selector.best_score_))
-
-
-
-def write_to_csv(filename,y):
-    jh = np.array(zip(scoring_SN, y))
-
-    new = pd.DataFrame(jh)
-    print new.head()
-    new.to_csv(filename, sep=',', encoding='UTF-8', header=['S/N', 'Scores'], index=False)
 
 write_to_csv('scoring_with_feature_selection.csv',y_scoring)
